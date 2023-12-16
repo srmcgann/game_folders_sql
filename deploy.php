@@ -1,0 +1,22 @@
+<?php
+
+require('db.php');
+
+$sql = file_get_contents('https://srmcgann.github.io/game_folders_sql/game_folders.sql');
+
+if (mysqli_multi_query($link, $sql)) {
+  do {
+    if ($res = mysqli_store_result()) {
+      while ($row = mysqli_fetch_row($res)) {
+        printf("%s\n", $row[0]);
+      }
+     mysqli_free_result();
+    }
+    if (mysqli_more_results()) {
+    }
+  } while (mysqli_next_result());
+}
+
+mysqli_close($link);
+
+echo "\n\ndone.\n\n";
