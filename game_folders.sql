@@ -78,6 +78,22 @@ CREATE TABLE IF NOT EXISTS `tictactoeSessions` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+CREATE TABLE IF NOT EXISTS `puyopuyoGames` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `data` mediumtext NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp(),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `puyopuyoSessions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  `data` text NOT NULL DEFAULT '',
+  `date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `gameID` int(11) NOT NULL,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(256) NOT NULL,
