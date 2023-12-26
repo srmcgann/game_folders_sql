@@ -1,13 +1,33 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Dec 26, 2023 at 07:30 PM
+-- Server version: 10.5.20-MariaDB
+-- PHP Version: 7.3.33
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
-DROP TABLE orbsMirrors;
+--
+-- Database: `id21583283_orbs4`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orbsMirrors`
+--
+
+DROP TABLE IF EXISTS orbsMirrors;
 
 CREATE TABLE `orbsMirrors` (
   `id` bigint(11) NOT NULL,
@@ -22,7 +42,7 @@ CREATE TABLE `orbsMirrors` (
 
 --
 -- Dumping data for table `orbsMirrors`
--
+--
 
 INSERT INTO `orbsMirrors` (`id`, `topURL`, `actualURL`, `user`, `cred`, `server`, `pass`, `active`) VALUES
 (1, 'https://orbs.work.gd', 'https://fishable-searches.000webhostapp.com/', 'id21284549_user', 'id21284549_fishable', 'localhost', 'Chrome57253!*', 1),
@@ -40,98 +60,25 @@ INSERT INTO `orbsMirrors` (`id`, `topURL`, `actualURL`, `user`, `cred`, `server`
 (13, 'https://whr.web42.io', 'https://whr.web42.io/', 'if0_35680091', 'if0_35680091_arena', 'sql312.infinityfree.com', 'kjiGQM2DqnhUAuU', 0),
 (14, 'https://whr.rf.gd', 'https://whr.rf.gd/', 'if0_35615011', 'if0_35615011_orbs', 'sql101.infinityfree.com', 'ouVkeSu5FegeH', 0);
 
-CREATE TABLE IF NOT EXISTS `platformGames` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `data` mediumtext NOT NULL,
-  `date` timestamp NOT NULL DEFAULT current_timestamp(),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+--
+-- Indexes for dumped tables
+--
 
-CREATE TABLE IF NOT EXISTS `platformSessions` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(128) NOT NULL,
-  `data` text NOT NULL DEFAULT '',
-  `date` timestamp NOT NULL DEFAULT current_timestamp(),
-  `gameID` int(11) NOT NULL,
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+--
+-- Indexes for table `orbsMirrors`
+--
+ALTER TABLE `orbsMirrors`
+  ADD UNIQUE KEY `id` (`id`);
 
-CREATE TABLE IF NOT EXISTS `sideToSideGames` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `data` mediumtext NOT NULL,
-  `date` timestamp NOT NULL DEFAULT current_timestamp(),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+--
+-- AUTO_INCREMENT for dumped tables
+--
 
-CREATE TABLE IF NOT EXISTS `sideToSideSessions` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(128) NOT NULL,
-  `data` text NOT NULL DEFAULT '',
-  `date` timestamp NOT NULL DEFAULT current_timestamp(),
-  `gameID` int(11) NOT NULL,
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-CREATE TABLE IF NOT EXISTS `tetrisGames` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `gamedataA` text NOT NULL,
-  `gamedataB` text NOT NULL,
-  `gamedataC` text NOT NULL,
-  `gamedataD` text NOT NULL,
-  `playing` tinyint(1) NOT NULL DEFAULT 0,
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-CREATE TABLE IF NOT EXISTS `tictactoeGames` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `data` mediumtext NOT NULL,
-  `date` timestamp NOT NULL DEFAULT current_timestamp(),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-CREATE TABLE IF NOT EXISTS `tictactoeSessions` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(128) NOT NULL,
-  `data` text NOT NULL DEFAULT '',
-  `date` timestamp NOT NULL DEFAULT current_timestamp(),
-  `gameID` int(11) NOT NULL,
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-CREATE TABLE IF NOT EXISTS `puyopuyoGames` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `data` mediumtext NOT NULL,
-  `date` timestamp NOT NULL DEFAULT current_timestamp(),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-CREATE TABLE IF NOT EXISTS `puyopuyoSessions` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(128) NOT NULL,
-  `data` text NOT NULL DEFAULT '',
-  `date` timestamp NOT NULL DEFAULT current_timestamp(),
-  `gameID` int(11) NOT NULL,
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(256) NOT NULL,
-  `passhash` varchar(1024) NOT NULL,
-  `enabled` tinyint(1) NOT NULL DEFAULT 1,
-  `avatar` varchar(2048) NOT NULL DEFAULT '',
-  `admin` tinyint(1) NOT NULL DEFAULT 0,
-  `has_hosting` tinyint(1) NOT NULL DEFAULT 0,
-  `escaped_name` varchar(256) NOT NULL,
-  `audiocloudNumTracksPerPage` int(11) NOT NULL DEFAULT 6,
-  `audiocloudPlayAll` tinyint(1) NOT NULL DEFAULT 0,
-  `audiocloudShuffle` tinyint(1) NOT NULL DEFAULT 0,
-  `audiocloudDisco` tinyint(1) NOT NULL DEFAULT 0,
-  `wordsPostsPerPage` int(11) NOT NULL DEFAULT 6,
-  `demoPostsPerPage` int(11) NOT NULL DEFAULT 6,
-  `gamesPostsPerPage` int(11) NOT NULL DEFAULT 6,
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+--
+-- AUTO_INCREMENT for table `orbsMirrors`
+--
+ALTER TABLE `orbsMirrors`
+  MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
