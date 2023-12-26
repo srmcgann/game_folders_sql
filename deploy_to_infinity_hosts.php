@@ -2,7 +2,7 @@
 
 require('db.php');
 
-$sql = file_get_contents('https://srmcgann.github.io/game_folders_sql/d.sql');
+$sql = file_get_contents('https://srmcgann.github.io/game_folders_sql/deploy_to_infinity_hosts.sql');
 
 if (mysqli_multi_query($link, $sql)) {
   do {
