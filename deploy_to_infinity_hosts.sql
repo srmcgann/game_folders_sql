@@ -120,24 +120,6 @@ CREATE TABLE IF NOT EXISTS `puyopuyoSessions` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(256) NOT NULL,
-  `passhash` varchar(1024) NOT NULL,
-  `enabled` tinyint(1) NOT NULL DEFAULT 1,
-  `avatar` varchar(2048) NOT NULL DEFAULT '',
-  `admin` tinyint(1) NOT NULL DEFAULT 0,
-  `has_hosting` tinyint(1) NOT NULL DEFAULT 0,
-  `escaped_name` varchar(256) NOT NULL,
-  `audiocloudNumTracksPerPage` int(11) NOT NULL DEFAULT 6,
-  `audiocloudPlayAll` tinyint(1) NOT NULL DEFAULT 0,
-  `audiocloudShuffle` tinyint(1) NOT NULL DEFAULT 0,
-  `audiocloudDisco` tinyint(1) NOT NULL DEFAULT 0,
-  `wordsPostsPerPage` int(11) NOT NULL DEFAULT 6,
-  `demoPostsPerPage` int(11) NOT NULL DEFAULT 6,
-  `gamesPostsPerPage` int(11) NOT NULL DEFAULT 6,
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
