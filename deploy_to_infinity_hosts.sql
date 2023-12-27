@@ -43,7 +43,8 @@ INSERT INTO `orbsMirrors` (`id`, `topURL`, `actualURL`, `user`, `cred`, `server`
 (12, 'https://whr.rf.gd', 'https://whr.rf.gd/', 'if0_35615011', 'if0_35615011_orbs', 'sql101.infinityfree.com', 'ouVkeSu5FegeH', 1),
 (13, 'https://whr.42web.io', 'https://whr.42web.io/', 'if0_35680091', 'if0_35680091_arena', 'sql312.infinityfree.com', 'kjiGQM2DqnhUAuU', 1),
 (14, 'https://whr.000.pe', 'https://whr.000.pe/', 'if0_35680402', 'if0_35680402_arena', 'sql200.infinityfree.com', 'nBbQv0M3POyp', 1),
-(15, 'https://orb.42web.io', 'https://orb.42web.io/', 'if0_35680488', 'if0_35680488_arena', 'sql213.infinityfree.com', '9K12EE4mmF3yi', 1);
+(15, 'https://orb.42web.io', 'https://orb.42web.io/', 'if0_35680488', 'if0_35680488_arena', 'sql213.infinityfree.com', '9K12EE4mmF3yi', 1),
+(16, 'https://efx.rf.gd', 'https://efx.rf.gd/', 'if0_35681218', 'if0_35681218_arena', 'sql111.infinityfree.com', 'siann2ji7AGh', '1');
 
 
 CREATE TABLE IF NOT EXISTS `platformGames` (
