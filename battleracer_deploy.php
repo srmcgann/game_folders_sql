@@ -9,6 +9,7 @@
 @copy('../puyopuyo/clippy.c6b23471.svg', '../battleracer/clippy.c6b23471.svg');
 @copy('../puyopuyo/g/clippy.png', '../battleracer/clippy.png');
 
+
 $img = file_get_contents('https://i.imgur.com/e5Cn0hD.png');
 file_put_contents('../battleracer/g/powerup1.png', $img);
 
@@ -1224,7 +1225,7 @@ $file = <<<'FILE'
                 if(starImgs.filter(v=>v.loaded).length == 9) starsLoaded = true
               }, 0)
             }
-            a.img.src = `star${i+1}.png`
+            a.img.src = `https://srmcgann.github.io/stars/star${i+1}.png`
             return a
           })
 
