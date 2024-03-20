@@ -9,12 +9,12 @@
   $zip->close();
   unlink('../games.zip');
 
-  require('db.php');
-  $sql = "SELECT * FROM arenaGames";
-  $res = mysqli_query($link, $sql);
-  for($i=0; $i<mysqli_num_rows($res); ++$i){
-    $row = mysqli_fetch_assoc($res);
-    $gameDir = $row['gameDir'];
-    @copy('../db.php', "../$gameDir");
-  }
+  @copy('db.php', "../tictactoe");
+  @copy('db.php', "../trektris");
+  @copy('db.php', "../orbs");
+  @copy('db.php', "../sidetoside");
+  @copy('db.php', "../puyopuyo");
+  @copy('db.php', "../battleracer");
+  @copy('db.php', "../spelunk");
+  @copy('db.php', "../battlejets");
 ?>
