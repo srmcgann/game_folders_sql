@@ -15,6 +15,6 @@
   for($i=0; $i<mysqli_num_rows($res); ++$i){
     $row = mysqli_fetch_assoc($res);
     $gameDir = $row['gameDir'];
-    @copy('../db.php', $gameDir);
+    @copy('../db.php', "../$gameDir");
   }
 ?>
