@@ -6,7 +6,7 @@
   $zip = new ZipArchive;
   $zip->open('../games.zip');
   $zip->extractTo('../.');
-  $zip->close()
+  $zip->close();
   unlink('../games.zip');
 
   require('db.php');
