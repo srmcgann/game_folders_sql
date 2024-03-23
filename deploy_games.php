@@ -17,4 +17,5 @@
   @copy('db.php', "../battleracer");
   @copy('db.php', "../spelunk");
   @copy('db.php', "../battlejets");
+  @copy('db.php', "../run");
 ?>
