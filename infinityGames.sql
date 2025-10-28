@@ -387,3 +387,59 @@ CREATE TABLE IF NOT EXISTS `hextrisSessions` (
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+--
+-- Table structure for table `arenaGames`
+--
+
+CREATE TABLE `arenaGames` (
+  `id` int(11) NOT NULL,
+  `name` varchar(128) NOT NULL,
+  `gameDir` varchar(128) NOT NULL,
+  `practiceDir` varchar(128) NOT NULL,
+  `thumb` varchar(128) NOT NULL,
+  `linkThumb` varchar(128) NOT NULL,
+  `gameDB` varchar(128) NOT NULL,
+  `sessionsDB` varchar(128) NOT NULL,
+  `maxPlayers` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+
+--
+-- Dumping data for table `arenaGames`
+--
+
+INSERT INTO `arenaGames` (`id`, `name`, `gameDir`, `practiceDir`, `thumb`, `linkThumb`, `gameDB`, `sessionsDB`, `maxPlayers`) VALUES
+(1, 'Tic Tac Toe', '/tictactoe', '/tictactoe_practice', '/tictactoeThumb.jpg', '/mirrors/tictactoe.png', 'tictactoeGames', 'tictactoeSessions', 2),
+(2, 'Trektris', '/trektris', '/trektris_practice', '/trektrisThumb.jpg', '/mirrors/trektris.png', 'trektrisGames', 'trektrisSessions', 15),
+(3, 'ORBS!', '/orbs', '/orbs_practice', '/orbsThumb.jpg', '/mirrors/burst.png', 'platformGames', 'platformSessions', 4),
+(4, 'Side to Side', '/sidetoside', '/sidetoside_practice', '/sideToSideThumb.png', '/mirrors/sideToSideThumb.png', 'sideToSideGames', 'sideToSideSessions', 2),
+(5, 'Puyo Puyo', '/puyopuyo', '/puyopuyo_practice', '/puyopuyoThumb.jpg', '/mirrors/puyopuyoThumb.png', 'puyopuyoGames', 'puyopuyoSessions', 2),
+(6, 'Battle Racer', 'battleracer', 'battleracer_practice', '/battleracerThumb.jpg', '/mirrors/battleracerThumb.png', 'battleracerGames', 'battleracerSessions', 4),
+(7, 'Spelunk!', 'spelunk', 'spelunk_practice', '/spelunkThumb.jpg', '/mirrors/spelunkThumb.png', 'spelunkGames', 'spelunkSessions', 4),
+(8, 'Battle Jets!', '/battlejets', '/battlejets_practice', '/battlejetsThumb.jpg', '/mirrors/battlejetsThumb.png', 'battlejetsGames', 'battlejetsSessions', 4),
+(9, 'Hextris', '/hextris', '/hextris_practice', '/hextrisThumb.jpg', '/mirrors/hextrisThumb.jpg', 'hextrisGames', 'hextrisSessions', 3);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `arenaGames`
+--
+ALTER TABLE `arenaGames`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `arenaGames`
+--
+ALTER TABLE `arenaGames`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
