@@ -492,6 +492,7 @@ INSERT INTO `arenaGames` (`id`, `name`, `gameDir`, `practiceDir`, `thumb`, `link
 (6, 'Battle Racer', 'battleracer', 'battleracer_practice', '/battleracerThumb.jpg', '/mirrors/battleracerThumb.png', 'battleracerGames', 'battleracerSessions', 4),
 (7, 'Spelunk!', 'spelunk', 'spelunk_practice', '/spelunkThumb.jpg', '/mirrors/spelunkThumb.png', 'spelunkGames', 'spelunkSessions', 4),
 (8, 'Battle Jets!', '/battlejets', '/battlejets_practice', '/battlejetsThumb.jpg', '/mirrors/battlejetsThumb.png', 'battlejetsGames', 'battlejetsSessions', 4);
+(8, 'Hextris!', '/hextris', '/hextris_practice', '/hextrisThumb.jpg', '/mirrors/hextrisThumb.png', 'hextrisGames', 'hextrisSessions', 4);
 
 -- --------------------------------------------------------
 
@@ -4423,6 +4424,32 @@ INSERT INTO `tictactoeSessions` (`id`, `name`, `data`, `date`, `gameID`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `hextrisGames`
+--
+
+DROP TABLE IF EXISTS `hextrisGames`;
+CREATE TABLE `hextrisGames` (
+  `id` int(11) NOT NULL,
+  `data` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hextrisSessions`
+--
+
+DROP TABLE IF EXISTS `hextrisSessions`;
+CREATE TABLE `hextrisSessions` (
+  `id` int(11) NOT NULL,
+  `name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `data` text COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `gameID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
 -- Table structure for table `trektrisGames`
 --
 
@@ -6728,6 +6755,18 @@ ALTER TABLE `trektrisSessions`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Indexes for table `hextrisGames`
+--
+ALTER TABLE `hextrisGames`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `hextrisSessions`
+--
+ALTER TABLE `hextrisSessions`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -6952,6 +6991,18 @@ ALTER TABLE `tictactoeGames`
 --
 ALTER TABLE `tictactoeSessions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `hextrisGames`
+--
+ALTER TABLE `hextrisGames`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1082953008;
+
+--
+-- AUTO_INCREMENT for table `hextrisSessions`
+--
+ALTER TABLE `hextrisSessions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `trektrisGames`
