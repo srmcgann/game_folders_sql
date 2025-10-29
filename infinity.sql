@@ -491,8 +491,8 @@ INSERT INTO `arenaGames` (`id`, `name`, `gameDir`, `practiceDir`, `thumb`, `link
 (5, 'Puyo Puyo', '/puyopuyo', '/puyopuyo_practice', '/puyopuyoThumb.jpg', '/mirrors/puyopuyoThumb.png', 'puyopuyoGames', 'puyopuyoSessions', 2),
 (6, 'Battle Racer', 'battleracer', 'battleracer_practice', '/battleracerThumb.jpg', '/mirrors/battleracerThumb.png', 'battleracerGames', 'battleracerSessions', 4),
 (7, 'Spelunk!', 'spelunk', 'spelunk_practice', '/spelunkThumb.jpg', '/mirrors/spelunkThumb.png', 'spelunkGames', 'spelunkSessions', 4),
-(8, 'Battle Jets!', '/battlejets', '/battlejets_practice', '/battlejetsThumb.jpg', '/mirrors/battlejetsThumb.png', 'battlejetsGames', 'battlejetsSessions', 4);
-(8, 'Hextris!', '/hextris', '/hextris_practice', '/hextrisThumb.jpg', '/mirrors/hextrisThumb.png', 'hextrisGames', 'hextrisSessions', 4);
+(8, 'Battle Jets!', '/battlejets', '/battlejets_practice', '/battlejetsThumb.jpg', '/mirrors/battlejetsThumb.png', 'battlejetsGames', 'battlejetsSessions', 4),
+(9, 'Hextris!', '/hextris', '/hextris_practice', '/hextrisThumb.jpg', '/mirrors/hextrisThumb.png', 'hextrisGames', 'hextrisSessions', 4);
 
 -- --------------------------------------------------------
 
