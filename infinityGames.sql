@@ -384,6 +384,32 @@ CREATE TABLE IF NOT EXISTS `hextrisSessions` (
 
 --
 
+DROP TABLE IF EXISTS `battleRacer2Games`;
+CREATE TABLE IF NOT EXISTS `battleRacer2Games` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `data` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp(),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1087856572 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `battleRacer2Sessions`
+--
+
+DROP TABLE IF EXISTS `battleRacer2Sessions`;
+CREATE TABLE IF NOT EXISTS `battleRacer2Sessions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `data` text COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `gameID` int(11) NOT NULL,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
