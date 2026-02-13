@@ -492,7 +492,8 @@ INSERT INTO `arenaGames` (`id`, `name`, `gameDir`, `practiceDir`, `thumb`, `link
 (6, 'Battle Racer', 'battleracer', 'battleracer_practice', '/battleracerThumb.jpg', '/mirrors/battleracerThumb.png', 'battleracerGames', 'battleracerSessions', 4),
 (7, 'Spelunk!', 'spelunk', 'spelunk_practice', '/spelunkThumb.jpg', '/mirrors/spelunkThumb.png', 'spelunkGames', 'spelunkSessions', 4),
 (8, 'Battle Jets!', '/battlejets', '/battlejets_practice', '/battlejetsThumb.jpg', '/mirrors/battlejetsThumb.png', 'battlejetsGames', 'battlejetsSessions', 4),
-(9, 'Hextris!', '/hextris', '/hextris_practice', '/hextrisThumb.jpg', '/mirrors/hextrisThumb.jpg', 'hextrisGames', 'hextrisSessions', 4);
+(9, 'Hextris!', '/hextris', '/hextris_practice', '/hextrisThumb.jpg', '/mirrors/hextrisThumb.jpg', 'hextrisGames', 'hextrisSessions', 4),
+(10, 'Battle Racer 2!', '/battleracer2', '/battleracer2_practice', '/battleracer2Thumb.jpg', '/mirrors/battleracer2Thumb.jpg', 'battleracer2Games', 'battleracer2Sessions', 4);
 
 -- --------------------------------------------------------
 
@@ -4424,6 +4425,32 @@ INSERT INTO `tictactoeSessions` (`id`, `name`, `data`, `date`, `gameID`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `battleracer2Games`
+--
+
+DROP TABLE IF EXISTS `battleracer2Games`;
+CREATE TABLE `battleracer2Games` (
+  `id` int(11) NOT NULL,
+  `data` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `battleracer2Sessions`
+--
+
+DROP TABLE IF EXISTS `battleracer2Sessions`;
+CREATE TABLE `battleracer2Sessions` (
+  `id` int(11) NOT NULL,
+  `name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `data` text COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `gameID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
 -- Table structure for table `hextrisGames`
 --
 
@@ -6755,6 +6782,30 @@ ALTER TABLE `trektrisSessions`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Indexes for table `battleracer2Games`
+--
+ALTER TABLE `battleracer2Games`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `battleracer2Sessions`
+--
+ALTER TABLE `battleracer2Sessions`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `hextrisGames`
+--
+ALTER TABLE `hextrisGames`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `hextrisSessions`
+--
+ALTER TABLE `hextrisSessions`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Indexes for table `hextrisGames`
 --
 ALTER TABLE `hextrisGames`
@@ -6991,6 +7042,12 @@ ALTER TABLE `tictactoeGames`
 --
 ALTER TABLE `tictactoeSessions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `battleracer2Games`
+--
+ALTER TABLE `battleracer2Games`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1082953008;
 
 --
 -- AUTO_INCREMENT for table `hextrisGames`
