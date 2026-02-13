@@ -384,8 +384,8 @@ CREATE TABLE IF NOT EXISTS `hextrisSessions` (
 
 --
 
-DROP TABLE IF EXISTS `battleRacer2Games`;
-CREATE TABLE IF NOT EXISTS `battleRacer2Games` (
+DROP TABLE IF EXISTS `battleracer2Games`;
+CREATE TABLE IF NOT EXISTS `battleracer2Games` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `data` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp(),
@@ -395,11 +395,11 @@ CREATE TABLE IF NOT EXISTS `battleRacer2Games` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `battleRacer2Sessions`
+-- Table structure for table `battleracer2Sessions`
 --
 
-DROP TABLE IF EXISTS `battleRacer2Sessions`;
-CREATE TABLE IF NOT EXISTS `battleRacer2Sessions` (
+DROP TABLE IF EXISTS `battleracer2Sessions`;
+CREATE TABLE IF NOT EXISTS `battleracer2Sessions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `data` text COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
