@@ -443,7 +443,8 @@ INSERT INTO `arenaGames` (`id`, `name`, `gameDir`, `practiceDir`, `thumb`, `link
 (6, 'Battle Racer', 'battleracer', 'battleracer_practice', '/battleracerThumb.jpg', '/mirrors/battleracerThumb.png', 'battleracerGames', 'battleracerSessions', 4),
 (7, 'Spelunk!', 'spelunk', 'spelunk_practice', '/spelunkThumb.jpg', '/mirrors/spelunkThumb.png', 'spelunkGames', 'spelunkSessions', 4),
 (8, 'Battle Jets!', '/battlejets', '/battlejets_practice', '/battlejetsThumb.jpg', '/mirrors/battlejetsThumb.png', 'battlejetsGames', 'battlejetsSessions', 4),
-(9, 'Hextris', '/hextris', '/hextris_practice', '/hextrisThumb.jpg', '/mirrors/hextrisThumb.jpg', 'hextrisGames', 'hextrisSessions', 3);
+(9, 'Hextris', '/hextris', '/hextris_practice', '/hextrisThumb.jpg', '/mirrors/hextrisThumb.jpg', 'hextrisGames', 'hextrisSessions', 3),
+(10, 'Battle Racer 2', '/battleracer2', '/battleracer2_practice', '/battleracer2Thumb.jpg', '/mirrors/battleracer2Thumb.png', 'battleracer2Games', 'battleracer2Sessions', 3);
 
 --
 -- Indexes for dumped tables
