@@ -484,16 +484,16 @@ CREATE TABLE `arenaGames` (
 --
 
 INSERT INTO `arenaGames` (`id`, `name`, `gameDir`, `practiceDir`, `thumb`, `linkThumb`, `gameDB`, `sessionsDB`, `maxPlayers`) VALUES
-(1, 'Tic Tac Toe', '/tictactoe', '/tictactoe_practice', '/tictactoeThumb.jpg', '/mirrors/tictactoe.png', 'tictactoeGames', 'tictactoeSessions', 2),
-(2, 'Trektris', '/trektris', '/trektris_practice', '/trektrisThumb.jpg', '/mirrors/trektris.png', 'trektrisGames', 'trektrisSessions', 15),
+(1, 'Tic Tac Toe!', '/tictactoe', '/tictactoe_practice', '/tictactoeThumb.jpg', '/mirrors/tictactoe.png', 'tictactoeGames', 'tictactoeSessions', 2),
+(2, 'Trektris!', '/trektris', '/trektris_practice', '/trektrisThumb.jpg', '/mirrors/trektris.png', 'trektrisGames', 'trektrisSessions', 15),
 (3, 'ORBS!', '/orbs', '/orbs_practice', '/orbsThumb.jpg', '/mirrors/burst.png', 'platformGames', 'platformSessions', 4),
-(4, 'Side to Side', '/sidetoside', '/sidetoside_practice', '/sideToSideThumb.png', '/mirrors/sideToSideThumb.png', 'sideToSideGames', 'sideToSideSessions', 2),
-(5, 'Puyo Puyo', '/puyopuyo', '/puyopuyo_practice', '/puyopuyoThumb.jpg', '/mirrors/puyopuyoThumb.png', 'puyopuyoGames', 'puyopuyoSessions', 2),
-(6, 'Battle Racer', 'battleracer', 'battleracer_practice', '/battleracerThumb.jpg', '/mirrors/battleracerThumb.png', 'battleracerGames', 'battleracerSessions', 4),
+(4, 'Side to Side!', '/sidetoside', '/sidetoside_practice', '/sideToSideThumb.png', '/mirrors/sideToSideThumb.png', 'sideToSideGames', 'sideToSideSessions', 2),
+(5, 'Puyo Puyo!', '/puyopuyo', '/puyopuyo_practice', '/puyopuyoThumb.jpg', '/mirrors/puyopuyoThumb.png', 'puyopuyoGames', 'puyopuyoSessions', 2),
+(6, 'Battle Racer!', 'battleracer', 'battleracer_practice', '/battleracerThumb.jpg', '/mirrors/battleracerThumb.png', 'battleracerGames', 'battleracerSessions', 4),
 (7, 'Spelunk!', 'spelunk', 'spelunk_practice', '/spelunkThumb.jpg', '/mirrors/spelunkThumb.png', 'spelunkGames', 'spelunkSessions', 4),
 (8, 'Battle Jets!', '/battlejets', '/battlejets_practice', '/battlejetsThumb.jpg', '/mirrors/battlejetsThumb.png', 'battlejetsGames', 'battlejetsSessions', 4),
-(9, 'Hextris!', '/hextris', '/hextris_practice', '/hextrisThumb.jpg', '/mirrors/hextrisThumb.jpg', 'hextrisGames', 'hextrisSessions', 4),
-(10, 'Battle Racer 2!', '/battleracer2', '/battleracer2_practice', '/battleracer2Thumb.jpg', '/mirrors/battleracer2Thumb.jpg', 'battleracer2Games', 'battleracer2Sessions', 4);
+(9, 'Hextris!', '/hextris', '/hextris_practice', '/hextrisThumb.jpg', '/mirrors/hextrisThumb.jpg', 'hextrisGames', 'hextrisSessions', 3),
+(10, 'Battle Racer 2!', '/battleracer2', '/battleracer2_practice', '/battleracer2Thumb.jpg', '/mirrors/battleracer2Thumb.png', 'battleracer2Games', 'battleracer2Sessions', 3);
 
 -- --------------------------------------------------------
 
